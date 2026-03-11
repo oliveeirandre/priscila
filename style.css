@@ -1,7 +1,7 @@
 :root {
     --color-bg: #F9F7F2; /* Cream/Silk Beige from reference */
-    --color-text-dark: #5C4A3C; /* Dark Coffee */
-    --color-text-muted: #8E7D71;
+    --color-text-dark: #4A3A2F; /* Darker for accessibility */
+    --color-text-muted: #6D5E54; /* Darker for accessibility */
     --color-primary: #725A4B; /* Darker brown for better contrast */
     --color-gold: #96743A; /* Darker gold for WCAG compliance */
     --color-white: #FFFFFF;
@@ -60,9 +60,9 @@ body {
 }
 
 @keyframes float {
-    0% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(40px) scale(1.05); }
-    100% { transform: translateY(0) scale(1); }
+    0% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(0, 40px, 0) scale(1.05); }
+    100% { transform: translate3d(0, 0, 0) scale(1); }
 }
 
 .app-container {
@@ -307,9 +307,9 @@ body {
 }
 
 @keyframes coffeePulse {
-    0% { box-shadow: 0 0 0 0 rgba(139, 111, 93, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(139, 111, 93, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(139, 111, 93, 0); }
+    0% { transform: translate3d(0,0,0) scale(1); box-shadow: 0 0 0 0 rgba(114, 90, 75, 0.4); }
+    70% { transform: translate3d(0,0,0) scale(1.02); box-shadow: 0 0 0 10px rgba(114, 90, 75, 0); }
+    100% { transform: translate3d(0,0,0) scale(1); box-shadow: 0 0 0 0 rgba(114, 90, 75, 0); }
 }
 
 /* Gallery Section */
