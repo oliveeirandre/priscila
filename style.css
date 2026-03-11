@@ -2,8 +2,8 @@
     --color-bg: #F9F7F2; /* Cream/Silk Beige from reference */
     --color-text-dark: #5C4A3C; /* Dark Coffee */
     --color-text-muted: #8E7D71;
-    --color-primary: #8B6F5D; /* Brown from reference button */
-    --color-gold: #C5A059;
+    --color-primary: #725A4B; /* Darker brown for better contrast */
+    --color-gold: #96743A; /* Darker gold for WCAG compliance */
     --color-white: #FFFFFF;
     
     --glass-bg: rgba(255, 255, 255, 0.6);

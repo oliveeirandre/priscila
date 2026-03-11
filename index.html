@@ -66,8 +66,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="preload" href="assets/perfil.webp" as="image" fetchpriority="high">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -87,7 +88,7 @@
             <!-- Hero Section with Video Background -->
             <section id="inicio" class="hero-section">
                 <div class="video-container">
-                    <video autoplay muted loop playsinline class="hero-video">
+                    <video autoplay muted loop playsinline class="hero-video" aria-hidden="true" poster="assets/perfil.webp">
                         <source src="assets/video.mp4" type="video/mp4">
                     </video>
                     <div class="video-overlay"></div>
