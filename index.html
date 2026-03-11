@@ -1,7 +1,30 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
+    <!-- [CONFIG] Substitua os IDs abaixo pelos seus IDs reais quando os tiver -->
+    <!-- Google Analytics (GTAG) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- Meta Pixel Code (Facebook) -->
+    <!-- <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'XXXXXXXXXXXXX');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=XXXXXXXXXXXXX&ev=PageView&noscript=1"
+    /></noscript> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Priscila Bertolaccini | Especialista em Mechas e Colorimetria</title>
@@ -93,7 +116,7 @@
             <section class="links-section">
                 <!-- Action Card 1: WhatsApp -->
                 <a href="https://wa.me/+5535998171030" class="action-card pulse-coffee" target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer" data-track="whatsapp" data-event="Lead">
                     <div class="card-icon whatsapp-icon">
                         <i class="fab fa-whatsapp"></i>
                     </div>
@@ -108,7 +131,7 @@
 
                 <!-- Action Card 2: Maps -->
                 <a href="https://maps.app.goo.gl/CNz4BbN7bHxDcjrZ9?g_st=ipc" class="action-card glass-card"
-                    target="_blank" rel="noopener noreferrer">
+                    target="_blank" rel="noopener noreferrer" data-track="maps" data-event="FindLocation">
                     <div class="card-icon map-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
@@ -126,7 +149,7 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <a href="#" class="action-card" id="vcard-download">
+            <a href="#" class="action-card" id="vcard-download" data-track="vcard" data-event="Contact">
                 <div class="card-content">
                     <h3>Adicionar aos contatos</h3>
                 </div>
