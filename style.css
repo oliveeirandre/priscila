@@ -519,3 +519,26 @@ body {
 #vcard-download .card-icon, #vcard-download .card-arrow {
     display: none !important;
 }
+
+/* SEO Specialties Section (Discreet) */
+.seo-specialties {
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+
+.specialties-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    opacity: 0.6;
+}
+
+.specialties-grid span {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    background: rgba(114, 90, 75, 0.05);
+    padding: 3px 8px;
+    border-radius: 12px;
+    white-space: nowrap;
+}
