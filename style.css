@@ -136,6 +136,8 @@ body {
     height: 35.5vh; /* Slightly smaller to accommodate iPhone safe area */
     overflow: hidden;
     position: relative;
+    background-color: var(--color-bg); /* Fallback color to prevent blank space */
+    aspect-ratio: 16 / 9; /* Standard mobile video aspect ratio */
 }
 
 .hero-video {
@@ -254,6 +256,7 @@ body {
     box-shadow: 0 2px 10px rgba(0,0,0,0.03);
     transition: all 0.2s ease;
     min-height: 70px;
+    contain: content; /* Minor optimization for layout rendering */
 }
 
 /* Fix iOS hover issues by relying mostly on active */
