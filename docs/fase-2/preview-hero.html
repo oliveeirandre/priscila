@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fase 2 · Preview Hero · Priscila Bertolaccini</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-bg: #F7F3EE;
+      --color-bg-dark: #1C1A18;
+      --color-text: #1C1A18;
+      --color-text-muted: #6B6560;
+      --color-text-on-dark: #F7F3EE;
+      --color-accent-soft: #C4B09A;
+      --color-line: rgba(28, 26, 24, 0.12);
+      --font-display: "Cormorant Garamond", Georgia, serif;
+      --font-body: "Manrope", system-ui, sans-serif;
+      --text-hero: clamp(2.5rem, 7vw, 4.1rem);
+      --page-pad: clamp(1.25rem, 4vw, 3.5rem);
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .note {
+      padding: 0.75rem var(--page-pad);
+      background: var(--color-bg-dark);
+      color: var(--color-text-on-dark);
+      font-size: 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .note strong { color: var(--color-accent-soft); }
+    .note-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .note button {
+      font: inherit;
+      font-size: 0.75rem;
+      font-weight: 500;
+      border: 1px solid rgba(247, 243, 238, 0.25);
+      background: transparent;
+      color: var(--color-text-on-dark);
+      padding: 0.4rem 0.75rem;
+      cursor: pointer;
+    }
+    .note button[aria-pressed="true"] {
+      background: var(--color-text-on-dark);
+      color: var(--color-bg-dark);
+      border-color: transparent;
+    }
+
+    .hero {
+      position: relative;
+      min-height: calc(100dvh - 2.75rem);
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      color: var(--color-text-on-dark);
+      text-align: left;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* Peito mais alto na tela → nome na base fica abaixo */
+      object-position: center 22%;
+      animation: ken 14s var(--ease-out) forwards;
+    }
+    .hero[data-variant="acao"] .hero-media img {
+      object-position: center 28%;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(28, 26, 24, 0.02) 0%,
+          rgba(28, 26, 24, 0.08) 38%,
+          rgba(28, 26, 24, 0.45) 58%,
+          rgba(28, 26, 24, 0.92) 100%
+        ),
+        linear-gradient(
+          90deg,
+          rgba(28, 26, 24, 0.5) 0%,
+          rgba(28, 26, 24, 0.18) 48%,
+          transparent 78%
+        );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(100%, 36rem);
+      padding: var(--page-pad);
+      padding-bottom: clamp(1.25rem, 4vh, 2.5rem);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      animation: rise 0.9s var(--ease-out) both;
+    }
+
+    h1.brand {
+      font-family: var(--font-display);
+      font-size: var(--text-hero);
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.55rem;
+    }
+    h1.brand span {
+      display: block;
+      width: 2.5rem;
+      height: 1px;
+      background: var(--color-accent-soft);
+      margin-top: 0.75rem;
+    }
+
+    .lede {
+      font-size: clamp(1.02rem, 3.1vw, 1.175rem);
+      line-height: 1.65;
+      color: rgba(247, 243, 238, 0.94);
+      max-width: 32ch;
+      margin: 0 0 1.25rem;
+      font-weight: 400;
+    }
+
+    .ctas {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 0.55rem;
+      width: 100%;
+      max-width: 22rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1 1 0;
+      min-height: 2.75rem;
+      padding: 0.7rem 0.75rem;
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--color-text-on-dark);
+      color: var(--color-bg-dark);
+    }
+    .btn-primary:hover { background: var(--color-accent-soft); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--color-text-on-dark);
+      border: 1px solid rgba(247, 243, 238, 0.5);
+    }
+    .btn-ghost:hover { border-color: #fff; }
+
+    /* Celular: ponto médio (abaixo do peito, acima da cintura) */
+    @media (max-width: 700px) {
+      .hero {
+        align-items: stretch;
+      }
+      .hero-media img { object-position: center 12%; }
+      .hero[data-variant="acao"] .hero-media img { object-position: center 18%; }
+      .hero-content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 69%;
+        bottom: 0;
+        width: 100%;
+        max-width: none;
+        padding: 0 1.1rem 1.15rem;
+        justify-content: flex-start;
+      }
+      h1.brand {
+        font-size: clamp(1.95rem, 8vw, 2.4rem);
+        margin-bottom: 0.45rem;
+      }
+      h1.brand span {
+        width: 2rem;
+        margin-top: 0.55rem;
+      }
+      .lede {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        max-width: 36ch;
+        margin-bottom: 0.9rem;
+      }
+      .ctas { max-width: none; gap: 0.45rem; }
+      .btn {
+        min-height: 2.55rem;
+        padding: 0.55rem 0.4rem;
+        font-size: 0.62rem;
+        letter-spacing: 0.03em;
+      }
+    }
+
+    .tokens {
+      padding: var(--page-pad);
+      padding-block: 3rem;
+      max-width: 72rem;
+      margin: 0 auto;
+    }
+    .tokens h2 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .tokens p {
+      color: var(--color-text-muted);
+      margin-bottom: 2rem;
+      max-width: 42ch;
+    }
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+      gap: 1rem;
+    }
+    .swatch figure {
+      aspect-ratio: 1.2;
+      border: 1px solid var(--color-line);
+    }
+    .swatch figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+    }
+    .swatch code {
+      display: block;
+      font-size: 0.7rem;
+      margin-top: 0.15rem;
+    }
+    .type-demo {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-line);
+      display: grid;
+      gap: 1.5rem;
+    }
+    .type-demo .display {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+    }
+    .type-demo .body {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--color-text-muted);
+      max-width: 50ch;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes ken {
+      from { transform: scale(1); }
+      to { transform: scale(1.04); }
+    }
+  </style>
+</head>
+<body>
+  <div class="note">
+    <div><strong>Fase 2 · Preview</strong> · v14 · mobile top 69% · traço curto</div>
+    <div class="note-actions">
+      <button type="button" id="btn-b" aria-pressed="true">Hero B · Mega Hair</button>
+      <button type="button" id="btn-a" aria-pressed="false">Alt · Ela em ação</button>
+    </div>
+  </div>
+
+  <section class="hero" data-variant="mega" aria-label="Preview da primeira dobra">
+    <div class="hero-media">
+      <img id="hero-img" src="assets/mega.jpg" alt="Priscila Bertolaccini com mega hair" />
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1 class="brand">Priscila Bertolaccini<span aria-hidden="true"></span></h1>
+      <p class="lede">O cabelo certo revela a sua melhor versão: mais luminosa, mais confiante, inconfundivelmente você. Do espelho ao olhar de quem te encontra.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#">Agendar horário</a>
+        <a class="btn btn-ghost" href="#">Ver trabalhos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tokens">
+    <h2>Tokens</h2>
+    <p>Paleta Les Amis + fotos dela. Tipografia: Cormorant Garamond + Manrope.</p>
+    <div class="swatches">
+      <div class="swatch"><figure style="background:#F7F3EE"></figure><figcaption>Background<code>#F7F3EE</code></figcaption></div>
+      <div class="swatch"><figure style="background:#FFFCF8"></figure><figcaption>Elevated<code>#FFFCF8</code></figcaption></div>
+      <div class="swatch"><figure style="background:#1C1A18"></figure><figcaption>Ink / CTA<code>#1C1A18</code></figcaption></div>
+      <div class="swatch"><figure style="background:#8A7355"></figure><figcaption>Accent<code>#8A7355</code></figcaption></div>
+      <div class="swatch"><figure style="background:#C4B09A"></figure><figcaption>Accent soft<code>#C4B09A</code></figcaption></div>
+      <div class="swatch"><figure style="background:#6B6560"></figure><figcaption>Muted<code>#6B6560</code></figcaption></div>
+    </div>
+    <div class="type-demo">
+      <p class="display">Cormorant Garamond · display editorial</p>
+      <p class="body">Manrope · texto e interface.</p>
+    </div>
+  </section>
+
+  <script>
+    const hero = document.querySelector('.hero');
+    const img = document.getElementById('hero-img');
+    const btnA = document.getElementById('btn-a');
+    const btnB = document.getElementById('btn-b');
+
+    function setVariant(which) {
+      const isB = which === 'b';
+      hero.dataset.variant = isB ? 'mega' : 'acao';
+      img.src = isB ? 'assets/mega.jpg' : 'assets/hero.jpg';
+      img.alt = isB
+        ? 'Priscila Bertolaccini com mega hair'
+        : 'Priscila Bertolaccini em atendimento no salão';
+      btnB.setAttribute('aria-pressed', String(isB));
+      btnA.setAttribute('aria-pressed', String(!isB));
+      img.style.animation = 'none';
+      void img.offsetWidth;
+      img.style.animation = '';
+    }
+
+    btnB.addEventListener('click', () => setVariant('b'));
+    btnA.addEventListener('click', () => setVariant('a'));
+  </script>
+</body>
+</html>
