@@ -929,6 +929,18 @@ h1.brand span,
   gap: 0.35rem;
 }
 
+.gallery--feed {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 0.25rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery--feed .gallery__item {
+  aspect-ratio: 3 / 4;
+}
+
 .gallery__item {
   position: relative;
   overflow: hidden;
@@ -948,8 +960,14 @@ h1.brand span,
   transform: scale(1.03);
 }
 
+@media (min-width: 900px) {
+  .gallery--feed {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
-  .gallery {
+  .gallery:not(.gallery--feed) {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.25rem;
   }
