@@ -877,6 +877,10 @@ h1.brand span,
   object-fit: cover;
 }
 
+.split__content {
+  padding-inline: var(--page-pad);
+}
+
 .split__content h2 {
   margin-bottom: 1rem;
 }
@@ -897,11 +901,21 @@ h1.brand span,
 @media (max-width: 768px) {
   .split {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.75rem;
   }
 
   .split--reverse {
     direction: ltr;
+  }
+
+  .split__content {
+    padding-bottom: 0.25rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .split__content {
+    padding-block: clamp(1.5rem, 3vw, 2.5rem);
   }
 }
 
