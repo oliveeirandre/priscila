@@ -36,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/site.css?v=1790012202" />
+  <link rel="stylesheet" href="assets/css/site.css?v=1790013357" />
     <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -72,11 +72,11 @@
       <a class="site-header__brand" href="">Priscila Bertolaccini</a>
       <nav class="site-header__nav" aria-label="Principal">
         <a href="" aria-current="page">Home</a>
-        <a href="trabalhos/">Trabalhos</a>
         <a href="servicos/">Serviços</a>
+        <a href="trabalhos/">Trabalhos</a>
+        <a href="#feedback">Feedback</a>
         <a href="sobre/">Sobre</a>
         <a href="salao-contato/">Localização</a>
-        <a href="#feedback">Feedback</a>
       </nav>
       <div class="site-header__actions">
         <a class="btn btn-primary site-header__cta" href="https://wa.me/5535998171030?text=Ol%C3%A1%20Priscila%2C%20vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio%20no%20Les%20Amis." data-cta="whatsapp" target="_blank" rel="noopener">Clique para agendar</a>
@@ -96,11 +96,11 @@
       </button>
       <nav class="nav-drawer__list" aria-label="Mobile">
       <a href="" aria-current="page" data-nav-overlay>Home</a>
-      <a href="trabalhos/" data-nav-overlay>Trabalhos</a>
       <a href="servicos/" data-nav-overlay>Serviços</a>
+      <a href="trabalhos/" data-nav-overlay>Trabalhos</a>
+      <a href="#feedback" data-nav-overlay>Feedback</a>
       <a href="sobre/" data-nav-overlay>Sobre</a>
       <a href="salao-contato/" data-nav-overlay>Localização</a>
-      <a href="#feedback" data-nav-overlay>Feedback</a>
       </nav>
       <div class="nav-drawer__cta">
         <a class="btn btn-primary" href="https://wa.me/5535998171030?text=Ol%C3%A1%20Priscila%2C%20vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio%20no%20Les%20Amis." data-cta="whatsapp" target="_blank" rel="noopener">Clique para agendar</a>
@@ -125,138 +125,65 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="feedback" aria-label="Navegação">
       <div class="container">
         <div class="section-intro reveal">
-          <h2>Especialidades</h2>
+          <h2>Comece por aqui</h2>
           <span class="brand-rule" aria-hidden="true"></span>
-          <p>Quatro pilares. Uma presença. Trabalho sob medida no Les Amis Nova Campinas.</p>
+          <p>Escolha o caminho que faz sentido para você.</p>
         </div>
-        <div class="specialties">
-          <a class="specialty-row reveal" href="servicos/#extensoes">
+        <nav class="specialties home-nav" aria-label="Seções do site">
+          <a class="specialty-row home-nav__row reveal" href="servicos/">
+            <span class="home-nav__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8 7.5 16.5 16M14.5 7.2l2.3-2.3M16.8 9.5l2.3-2.3M7.2 14.5l-2.3 2.3M9.5 16.8l-2.3 2.3"/></svg>
+            </span>
             <div class="specialty-row__main">
-              <span class="specialty-row__name">Mega Hair</span>
-              <span class="specialty-row__desc">Densidade, comprimento e naturalidade com acabamento de alto padrão.</span>
+              <span class="specialty-row__name">Serviços</span>
+              <span class="specialty-row__desc">Mega Hair, mechas, henna e cortes sob medida.</span>
             </div>
             <span class="specialty-row__arrow" aria-hidden="true">→</span>
           </a>
-          <a class="specialty-row reveal" href="servicos/#mechas-cor">
+          <a class="specialty-row home-nav__row reveal" href="trabalhos/">
+            <span class="home-nav__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            </span>
             <div class="specialty-row__main">
-              <span class="specialty-row__name">Mechas</span>
-              <span class="specialty-row__desc">Luz e dimensão sob medida, incluindo Morena Iluminada.</span>
+              <span class="specialty-row__name">Trabalhos</span>
+              <span class="specialty-row__desc">Resultados reais de atendimentos no Les Amis.</span>
             </div>
             <span class="specialty-row__arrow" aria-hidden="true">→</span>
           </a>
-          <a class="specialty-row reveal" href="servicos/#henna">
+          <a class="specialty-row home-nav__row reveal" href="#feedback">
+            <span class="home-nav__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17.5 4.5 20V7.5A2.5 2.5 0 0 1 7 5h10a2.5 2.5 0 0 1 2.5 2.5v7A2.5 2.5 0 0 1 17 17H7z"/><path d="M8.5 9.5h7M8.5 13h4.5"/></svg>
+            </span>
             <div class="specialty-row__main">
-              <span class="specialty-row__name">Henna</span>
-              <span class="specialty-row__desc">Camuflagem de branco discreta, raiz natural, resultado elegante.</span>
+              <span class="specialty-row__name">Feedback</span>
+              <span class="specialty-row__desc">Histórias de quem confiou no meu atendimento.</span>
             </div>
             <span class="specialty-row__arrow" aria-hidden="true">→</span>
           </a>
-          <a class="specialty-row reveal" href="servicos/#corte">
+          <a class="specialty-row home-nav__row reveal" href="sobre/">
+            <span class="home-nav__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.25"/><path d="M5.5 19.5c1.6-3.2 4-4.75 6.5-4.75s4.9 1.55 6.5 4.75"/></svg>
+            </span>
             <div class="specialty-row__main">
-              <span class="specialty-row__name">Cortes</span>
-              <span class="specialty-row__desc">Visagismo e movimento alinhados ao seu rosto e ao seu ritmo.</span>
+              <span class="specialty-row__name">Sobre</span>
+              <span class="specialty-row__desc">Quem sou eu e como conduzo cada atendimento.</span>
             </div>
             <span class="specialty-row__arrow" aria-hidden="true">→</span>
           </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--flush">
-      <div class="container">
-        <div class="section-intro reveal">
-          <h2>Resultados</h2>
-          <span class="brand-rule" aria-hidden="true"></span>
-          <p>Prova visual. Sem filtros de marketing. O trabalho fala.</p>
-        </div>
-      </div>
-      <div class="results-grid">
-        <a class="results-grid__item results-grid__item--wide reveal" href="trabalhos/">
-          <img src="assets/img/prova-dupla.webp" alt="Atendimento e resultado no salão" width="1279" height="1600" loading="lazy" />
-        </a>
-        <a class="results-grid__item reveal" href="trabalhos/">
-          <img src="assets/img/prova-resultado.webp" alt="Resultado de mechas no salão" width="1200" height="1600" loading="lazy" />
-        </a>
-        <a class="results-grid__item reveal" href="mega-hair/">
-          <img src="assets/img/mega-antes-depois.webp" alt="Antes e depois de Mega Hair" width="1280" height="1600" loading="lazy" />
-        </a>
-        <a class="results-grid__item results-grid__item--wide reveal" href="mechas/">
-          <img src="assets/img/mechas-03.webp" alt="Resultado de mechas" width="1200" height="1600" loading="lazy" />
-        </a>
-      </div>
-      <div class="container" style="margin-top:2rem;text-align:center">
-        <a class="btn btn-dark" href="trabalhos/">Trabalhos</a>
-      </div>
-    </section>
-
-    <section class="section" id="feedback">
-      <div class="container">
-        <div class="section-intro reveal">
-          <h2>O que permanece depois da transformação</h2>
-          <span class="brand-rule" aria-hidden="true"></span>
-          <p>Mais do que um cabelo bonito, quero que cada mulher saia do meu atendimento sentindo que foi verdadeiramente ouvida, cuidada e compreendida.</p>
-          <p>Essas são algumas das histórias e percepções de mulheres que confiaram em meu trabalho.</p>
-        </div>
-      </div>
-      <div class="results-grid reveal">
-        <div class="results-grid__item results-grid__item--wide">
-          <img src="assets/img/prova-dupla.webp" alt="Cliente e resultado no salão" width="1279" height="1600" loading="lazy" />
-        </div>
-        <div class="results-grid__item">
-          <img src="assets/img/mechas-04.webp" alt="Resultado de transformação" width="1200" height="1600" loading="lazy" />
-        </div>
-        <div class="results-grid__item">
-          <img src="assets/img/mechas-01.webp" alt="Resultado de atendimento" width="1200" height="1600" loading="lazy" />
-        </div>
-        <div class="results-grid__item results-grid__item--wide">
-          <img src="assets/img/mechas-05.webp" alt="Resultado finalizado" width="1200" height="1600" loading="lazy" />
-        </div>
-      </div>
-      <div class="container feedback-close reveal">
-        <p>Cada resultado carrega uma história.</p>
-        <p>E é isso que torna meu trabalho tão especial.</p>
-        <p>Não existe uma transformação igual à outra, porque não existe uma mulher igual à outra.</p>
-        <a class="btn btn-dark" href="https://wa.me/5535998171030?text=Ol%C3%A1%20Priscila%2C%20vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio%20no%20Les%20Amis." data-cta="whatsapp" target="_blank" rel="noopener">Quero viver essa experiência</a>
-      </div>
-    </section>
-
-    <section class="section section-dark">
-      <div class="split split--reverse reveal">
-        <div class="split__media">
-          <img src="assets/img/retrato.webp" alt="Retrato de Priscila Bertolaccini" width="896" height="1184" loading="lazy" />
-        </div>
-        <div class="split__content">
-          <h2>Sobre mim</h2>
-          <span class="brand-rule" aria-hidden="true"></span>
-          <p>Olá, é um prazer ter você por aqui!</p>
-          <p>Eu sou Priscila Bertolaccini, tenho 31 anos, sou casada e sou cabeleireira especializada em extensões capilares e personalização de cor.</p>
-          <a class="btn btn-ghost" href="sobre/">Conhecer</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="split reveal">
-        <div class="split__media">
-          <img src="assets/img/fachada.webp" alt="Fachada do salão Les Amis" width="1284" height="1706" loading="lazy" />
-        </div>
-        <div class="split__content">
-          <h2>Les Amis Nova Campinas</h2>
-          <span class="brand-rule" aria-hidden="true"></span>
-          <p>Ambiente de alto padrão para um atendimento sereno e preciso. Venha conhecer o espaço.</p>
-          <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=Rua+Augusto+C%C3%A9sar+de+Andrade,+364,+Nova+Campinas,+Campinas,+SP" target="_blank" rel="noopener" data-cta="maps">Ver no Maps</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-band">
-      <div class="container cta-band__inner reveal">
-        <h2>Pronta para a sua melhor versão?</h2>
-        <p>Agende pelo WhatsApp. Atendimento no Les Amis Nova Campinas.</p>
-        <a class="btn btn-primary" href="https://wa.me/5535998171030?text=Ol%C3%A1%20Priscila%2C%20vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio%20no%20Les%20Amis." data-cta="whatsapp" target="_blank" rel="noopener">Clique para agendar</a>
+          <a class="specialty-row home-nav__row reveal" href="salao-contato/">
+            <span class="home-nav__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s6.5-5.4 6.5-11A6.5 6.5 0 0 0 5.5 10c0 5.6 6.5 11 6.5 11z"/><circle cx="12" cy="10" r="2.25"/></svg>
+            </span>
+            <div class="specialty-row__main">
+              <span class="specialty-row__name">Localização</span>
+              <span class="specialty-row__desc">Atendimento em Campinas, no Les Amis Nova Campinas.</span>
+            </div>
+            <span class="specialty-row__arrow" aria-hidden="true">→</span>
+          </a>
+        </nav>
       </div>
     </section>
 
@@ -285,6 +212,6 @@
   <div class="sticky-cta" data-sticky-cta>
     <a class="btn btn-primary" href="https://wa.me/5535998171030?text=Ol%C3%A1%20Priscila%2C%20vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio%20no%20Les%20Amis." data-cta="whatsapp" target="_blank" rel="noopener">Clique para agendar</a>
   </div>
-  <script src="assets/js/site.js?v=1790012202" defer></script>
+  <script src="assets/js/site.js?v=1790013357" defer></script>
 </body>
 </html>
