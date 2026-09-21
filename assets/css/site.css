@@ -532,9 +532,11 @@ h1.brand span,
   padding: 0.7rem 0.75rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+  /* Extra height pushes brand + CTAs below the first fold (sticky stays alone) */
   .hero {
-    align-items: stretch;
+    min-height: calc(100dvh + 11rem);
+    align-items: end;
   }
 
   .hero-media img,
@@ -548,15 +550,11 @@ h1.brand span,
   }
 
   .hero-content {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 69%;
-    bottom: 0;
+    position: relative;
     width: 100%;
     max-width: none;
-    padding: 0 1.1rem 1.15rem;
-    justify-content: flex-start;
+    padding: 1.25rem 1.1rem calc(1.35rem + 4.35rem + env(safe-area-inset-bottom));
+    justify-content: flex-end;
   }
 
   h1.brand {
