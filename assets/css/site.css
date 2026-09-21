@@ -1268,6 +1268,78 @@ h1.brand span,
   margin-bottom: 0;
 }
 
+.location-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1.5rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.location-chip__icon {
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-accent);
+}
+
+.location-chip__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.location-address {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-line);
+}
+
+.location-address__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.45rem;
+}
+
+.location-address p {
+  color: var(--color-text);
+  line-height: 1.55;
+}
+
+.location-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.5rem;
+}
+
+.location-ctas .btn {
+  margin-top: 0;
+}
+
+.section-dark .location-ctas .btn-ghost {
+  color: var(--color-text-on-dark);
+  border-color: rgba(247, 243, 238, 0.45);
+}
+
+.section-dark .location-ctas .btn-primary {
+  background: var(--color-text-on-dark);
+  color: var(--color-bg-dark);
+}
+
+.location-closing {
+  margin-top: 1.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.5vw, 1.55rem);
+  color: var(--color-text-on-dark);
+  line-height: 1.35;
+}
+
 html {
   scroll-padding-top: calc(var(--header-h) + 0.75rem);
 }
