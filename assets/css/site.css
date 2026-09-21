@@ -1187,15 +1187,15 @@ h1.brand span,
   margin-top: 0;
 }
 
-.prose-emphasis {
+.prose p.prose-emphasis {
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 500;
-  font-size: clamp(1.65rem, 4.2vw, 2.15rem);
+  font-size: clamp(2.15rem, 7.5vw, 2.85rem);
   color: var(--color-text) !important;
-  line-height: 1.35;
-  letter-spacing: -0.015em;
-  margin-top: 1.35rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-top: 1.5rem;
 }
 
 .service-kicker {
