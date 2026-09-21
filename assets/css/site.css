@@ -1191,11 +1191,15 @@ h1.brand span,
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 500;
-  font-size: clamp(2.15rem, 7.5vw, 2.85rem);
+  /* One line: size scales to fill the available width */
+  font-size: min(2.85rem, calc((100vw - (2 * var(--page-pad))) / 17.25));
   color: var(--color-text) !important;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
   margin-top: 1.5rem;
+  white-space: nowrap;
+  max-width: none;
+  overflow: visible;
 }
 
 .service-kicker {
