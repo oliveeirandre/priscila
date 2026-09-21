@@ -898,6 +898,97 @@ h1.brand span,
   color: rgba(247, 243, 238, 0.72);
 }
 
+/* --------------------------------------------------------------------------
+   Contact actions (salão)
+   -------------------------------------------------------------------------- */
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.85rem;
+  max-width: 28rem;
+  border-top: 1px solid var(--color-line);
+}
+
+.contact-action {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.05rem 0;
+  border-bottom: 1px solid var(--color-line);
+  color: var(--color-text);
+  transition:
+    color var(--dur-1) var(--ease-out),
+    background var(--dur-1) var(--ease-out);
+}
+
+.contact-action__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  flex-shrink: 0;
+  border: 1px solid var(--color-line);
+  color: var(--color-text);
+  transition:
+    border-color var(--dur-1) var(--ease-out),
+    background var(--dur-1) var(--ease-out),
+    color var(--dur-1) var(--ease-out);
+}
+
+.contact-action__icon svg {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+}
+
+.contact-action__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.contact-action__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.contact-action__meta {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.35;
+}
+
+.contact-action:hover {
+  color: var(--color-text);
+}
+
+.contact-action:hover .contact-action__icon {
+  border-color: var(--color-text);
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.contact-action:hover .contact-action__meta {
+  color: var(--color-text);
+}
+
+.contact-action--whatsapp .contact-action__icon {
+  background: var(--color-text);
+  border-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+.contact-action--whatsapp:hover .contact-action__icon {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg-dark);
+}
+
 @media (max-width: 768px) {
   .split {
     grid-template-columns: 1fr;
