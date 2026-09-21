@@ -1190,11 +1190,12 @@ h1.brand span,
 .prose-emphasis {
   font-family: var(--font-display);
   font-style: italic;
-  font-weight: 400;
-  font-size: clamp(1.35rem, 2.8vw, 1.75rem);
+  font-weight: 500;
+  font-size: clamp(1.65rem, 4.2vw, 2.15rem);
   color: var(--color-text) !important;
-  line-height: 1.4;
-  letter-spacing: -0.01em;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  margin-top: 1.35rem;
 }
 
 .service-kicker {
