@@ -96,9 +96,9 @@
 |----------|----------|
 | Visual | `IMG_0708` · backup `0706`/`0707` |
 | Título (marca) | **Priscila Bertolaccini** |
-| Texto de apoio | **O cabelo certo revela a sua melhor versão: mais luminosa, mais confiante, inconfundivelmente você. Do espelho ao olhar de quem te encontra.** |
-| CTA primário | **Agendar horário** → WhatsApp |
-| CTA secundário | Ver trabalhos |
+| Texto de apoio | **Transformações personalizadas para mulheres que valorizam naturalidade, saúde dos cabelos e beleza atemporal.** |
+| CTA primário | **Clique para agendar** → WhatsApp |
+| CTA secundário | Trabalhos |
 | Motion | Fade-up do texto · Ken Burns sutil na foto |
 
 ### Por que essa copy
