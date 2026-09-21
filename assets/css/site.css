@@ -533,9 +533,9 @@ h1.brand span,
 }
 
 @media (max-width: 900px) {
-  /* Extra height pushes brand + CTAs below the first fold (sticky stays alone) */
+  /* Brand + lede above sticky; hero CTAs hidden (sticky covers agendar) */
   .hero {
-    min-height: calc(100dvh + 11rem);
+    min-height: 100dvh;
     align-items: end;
   }
 
@@ -553,7 +553,7 @@ h1.brand span,
     position: relative;
     width: 100%;
     max-width: none;
-    padding: 1.25rem 1.1rem calc(1.35rem + 4.35rem + env(safe-area-inset-bottom));
+    padding: 0 1.1rem calc(1.15rem + 4.5rem + env(safe-area-inset-bottom));
     justify-content: flex-end;
   }
 
@@ -572,19 +572,11 @@ h1.brand span,
     font-size: 0.92rem;
     line-height: 1.5;
     max-width: 36ch;
-    margin-bottom: 0.9rem;
+    margin-bottom: 0;
   }
 
   .hero .ctas {
-    max-width: none;
-    gap: 0.45rem;
-  }
-
-  .hero .ctas .btn {
-    min-height: 2.55rem;
-    padding: 0.55rem 0.4rem;
-    font-size: 0.62rem;
-    letter-spacing: 0.03em;
+    display: none;
   }
 }
 
