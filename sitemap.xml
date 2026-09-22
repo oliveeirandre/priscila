@@ -38,9 +38,15 @@
   </url>
   <url>
     <loc>https://pribertolaccini.com.br/trabalhos/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://pribertolaccini.com.br/feedback/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pribertolaccini.com.br/sobre/</loc>

@@ -1160,8 +1160,10 @@ h1.brand span,
 }
 
 .feedback-close {
-  margin-top: clamp(2rem, 5vw, 3rem);
+  margin-top: clamp(2.5rem, 6vw, 4rem);
   max-width: 36rem;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .feedback-close p {
@@ -1175,11 +1177,71 @@ h1.brand span,
   color: var(--color-text);
   font-family: var(--font-display);
   font-size: clamp(1.35rem, 2.8vw, 1.75rem);
-  line-height: 1.3;
+  font-style: italic;
+  line-height: 1.35;
 }
 
 .feedback-close .btn {
   margin-top: 1.75rem;
+}
+
+.feedback-intro {
+  max-width: 36rem;
+  margin-inline: auto;
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+.feedback-intro__lead {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.2vw, 2rem);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-text) !important;
+  line-height: 1.3;
+  max-width: 22ch;
+  margin-inline: auto;
+}
+
+.feedback-intro .brand-rule {
+  margin-inline: auto;
+}
+
+.quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 38rem;
+  margin-inline: auto;
+}
+
+.quote {
+  margin: 0;
+  padding: clamp(1.5rem, 3.5vw, 2rem) 0;
+  border-top: 1px solid var(--color-line);
+}
+
+.quote:last-child {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.quote blockquote {
+  margin: 0;
+}
+
+.quote p {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.quote--featured p {
+  font-size: clamp(1.25rem, 2.8vw, 1.6rem);
+  line-height: 1.4;
 }
 
 .prose {
