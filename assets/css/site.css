@@ -1189,7 +1189,7 @@ h1.brand span,
   max-width: 36rem;
   margin-inline: auto;
   text-align: center;
-  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: clamp(2rem, 5vw, 3rem);
 }
 
 .feedback-intro__lead {
@@ -1205,6 +1205,41 @@ h1.brand span,
 
 .feedback-intro .brand-rule {
   margin-inline: auto;
+}
+
+.gallery--feedback {
+  width: 100%;
+  max-width: 22rem;
+  margin: 0 auto;
+  padding: 0 var(--page-pad);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.gallery--feedback .gallery__item {
+  aspect-ratio: auto;
+  overflow: hidden;
+  background: var(--color-bg-elevated);
+}
+
+.gallery--feedback .gallery__item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.gallery--feedback .gallery__item:hover img {
+  transform: none;
+}
+
+@media (min-width: 720px) {
+  .gallery--feedback {
+    max-width: 46rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 .quotes {
