@@ -649,6 +649,10 @@ h1.brand span,
   padding-top: clamp(1.25rem, 3vw, 2rem);
 }
 
+.section--flush-top {
+  padding-top: 0;
+}
+
 .page-hero--text-only {
   min-height: auto;
   padding-block: calc(var(--header-h) + 3rem) 3rem;
