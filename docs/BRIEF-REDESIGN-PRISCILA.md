@@ -127,7 +127,7 @@ Olá Priscila, vim pelo site e quero agendar um horário de corte no Les Amis.
 | Sobre | `/sobre` | Confiança + método + Kérastase |
 | Salão & Contato | `/salao-contato` | Les Amis + Maps + WhatsApp |
 
-> **2026-09-22:** landings `/mega-hair`, `/mechas`, `/henna-camuflagem-de-branco`, `/cortes` foram descontinuadas como páginas de conteúdo. Ficam só como redirect `noindex` → âncoras em `/servicos/`. Vídeos de processo vivem nas galerias Mega e Corte de Serviços.
+> **2026-09-22:** landings `/mega-hair`, `/mechas`, `/henna-camuflagem-de-branco`, `/cortes` foram **removidas**. Conteúdo e vídeos ficam em `/servicos/`. URLs antigas passam a 404.
 
 ### Navegação
 `Priscila Bertolaccini` · Serviços · Trabalhos · Feedback · Sobre · Localização · **Agendar horário**
