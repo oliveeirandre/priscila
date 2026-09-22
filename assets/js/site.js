@@ -157,7 +157,6 @@ document.addEventListener('DOMContentLoaded', function () {
       '</button>' +
       '<figure class="lightbox__figure">' +
       '<img class="lightbox__img" alt="" />' +
-      '<figcaption class="lightbox__caption" hidden></figcaption>' +
       '</figure>' +
       '<button type="button" class="lightbox__nav lightbox__nav--next" data-lightbox-next aria-label="Próxima">' +
       '<span aria-hidden="true">→</span>' +
@@ -166,7 +165,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(lightbox);
 
     var lightboxImg = lightbox.querySelector('.lightbox__img');
-    var lightboxCaption = lightbox.querySelector('.lightbox__caption');
     var btnPrev = lightbox.querySelector('[data-lightbox-prev]');
     var btnNext = lightbox.querySelector('[data-lightbox-next]');
     var activeItems = [];
@@ -195,13 +193,6 @@ document.addEventListener('DOMContentLoaded', function () {
       var img = activeItems[activeIndex];
       lightboxImg.src = img.currentSrc || img.src;
       lightboxImg.alt = img.alt || '';
-      if (img.alt) {
-        lightboxCaption.textContent = img.alt;
-        lightboxCaption.hidden = false;
-      } else {
-        lightboxCaption.textContent = '';
-        lightboxCaption.hidden = true;
-      }
       syncNav();
     }
 
