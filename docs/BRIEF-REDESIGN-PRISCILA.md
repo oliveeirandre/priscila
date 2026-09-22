@@ -121,16 +121,16 @@ Olá Priscila, vim pelo site e quero agendar um horário de corte no Les Amis.
 | Página | URL | Job da página |
 |--------|-----|----------------|
 | Home | `/` | Desejo + prova + CTA |
-| Mega Hair | `/mega-hair` | Serviço #1 + SEO + conversão |
-| Mechas | `/mechas` | Mechas + Morena Iluminada |
-| Henna | `/henna-camuflagem-de-branco` | Camuflagem de branco |
-| Cortes | `/cortes` | Corte / visagismo |
-| Trabalhos | `/trabalhos` | Portfólio filtrável |
+| Serviços | `/servicos` | Hub dos 4 pilares (Mega → Mechas → Henna → Cortes) + mídia |
+| Trabalhos | `/trabalhos` | Portfólio |
+| Feedback | `/feedback` | Prova social (prints) |
 | Sobre | `/sobre` | Confiança + método + Kérastase |
 | Salão & Contato | `/salao-contato` | Les Amis + Maps + WhatsApp |
 
+> **2026-09-22:** landings `/mega-hair`, `/mechas`, `/henna-camuflagem-de-branco`, `/cortes` foram descontinuadas como páginas de conteúdo. Ficam só como redirect `noindex` → âncoras em `/servicos/`. Vídeos de processo vivem nas galerias Mega e Corte de Serviços.
+
 ### Navegação
-`Priscila Bertolaccini` · Mega Hair · Mechas · Henna · Cortes · Trabalhos · Sobre · **Agendar horário**
+`Priscila Bertolaccini` · Serviços · Trabalhos · Feedback · Sobre · Localização · **Agendar horário**
 
 Mobile: CTA sticky **Agendar horário**.
 
@@ -382,7 +382,7 @@ Reaproveitar IDs atuais do `index.html` (GTAG `G-Q21BVTZ1GJ`, Pixel `12489654473
 1. ~~Nome da atriz~~ → Alexandra Richter (só interno). 
 2. ~~Citar nome no site?~~ → **Não** · fotos `1269`/`1270` sim. 
 3. ~~`1272` é o mesmo atendimento?~~ → **Não**. 
-4. Renomear/converter `IMG_1276` (arquivo HEIC com extensão .JPEG). 
+4. ~~Renomear/converter `IMG_1276` (arquivo HEIC com extensão .JPEG).~~ → `resultado-bob-ondas-castanho.webp` (1080px, mobile). 
 5. ~~Headline longa~~ → nome + apoio curto. 
 6. ~~CTA avaliação global~~ → **Agendar horário**.
 
