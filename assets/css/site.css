@@ -1057,6 +1057,24 @@ h1.brand span,
   aspect-ratio: 3 / 4;
 }
 
+/* Vídeo no fim da grade: largura total (= 2 colunas no mobile), ~2x a altura de um tile */
+.gallery--feed .gallery__item--video {
+  grid-column: 1 / -1;
+  aspect-ratio: 3 / 4;
+  background: var(--color-bg-dark);
+}
+
+.gallery--lightbox .gallery__item--video {
+  cursor: default;
+}
+
+@media (min-width: 720px) {
+  .gallery--feed .gallery__item--video {
+    width: min(100%, 24rem);
+    justify-self: center;
+  }
+}
+
 .gallery__item {
   position: relative;
   overflow: hidden;
