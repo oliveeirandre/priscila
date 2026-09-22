@@ -7,6 +7,7 @@ IMAGENS Q ELA ME MANDOU/
 # Build helpers
 _build_pages.py
 _prep_feedback_imgs.py
+_prep_images.py
 
 # Logs
 *.log
