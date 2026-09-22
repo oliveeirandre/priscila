@@ -113,6 +113,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  /* ── Maps CTA analytics ── */
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('a[data-cta="maps"]');
+    if (!link) return;
+    var payload = { page: location.pathname };
+    if (typeof window.gtag === 'function') {
+      gtag('event', 'click_maps', payload);
+    }
+    if (typeof window.fbq === 'function') {
+      fbq('trackCustom', 'click_maps', payload);
+    }
+  });
+
+  /* ── Trabalhos view ── */
+  if (/\/trabalhos\/?$/.test(location.pathname)) {
+    var viewPayload = { page: location.pathname };
+    if (typeof window.gtag === 'function') {
+      gtag('event', 'view_trabalhos', viewPayload);
+    }
+    if (typeof window.fbq === 'function') {
+      fbq('trackCustom', 'view_trabalhos', viewPayload);
+    }
+  }
+
   /* ── Trabalhos filter ── */
   var filterButtons = document.querySelectorAll('[data-filter]');
   var workItems = document.querySelectorAll('[data-work]');

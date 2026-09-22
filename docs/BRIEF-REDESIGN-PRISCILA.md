@@ -3,11 +3,25 @@
 **Status:** Documento mestre (fonte da verdade) 
 **Domínio atual:** https://pribertolaccini.com.br/ 
 **Repo:** SITE_PRISCILA (GitHub Pages) 
-**Última atualização:** 2026-09-20 
+**Última atualização:** 2026-09-22 
 
 > Este arquivo é a referência única do projeto. 
 > Decisões de produto, marca, conteúdo, assets e técnico vivem aqui. 
 > O site atual (estilo Linktree) permanece no ar até o go-live.
+
+### Ponto de restauração visual
+
+| Item | Valor |
+|------|--------|
+| Tag Git | `backup/pre-fase-a-2026-09-22` |
+| Commit visual base | `e12d0bf` |
+| Uso | Voltar ao visual da Home/landing antes da Fase A |
+
+**Depois do restore (2026-09-22):** reaplicamos só melhorias **sem mudar a cara da Home/landing**: CTA “Agendar horário”, vídeos na grade Mega/Cortes, WebP `1276`, FAQ schema invisível, NAP no schema da Home, eventos `click_maps` / `view_trabalhos`.
+
+**FAQ schema (o que é):** dados JSON-LD no `<head>` para o Google entender perguntas e respostas. **Não aparece na tela.** Diferente de uma seção FAQ visível (que foi revertida de propósito).
+
+**Brief “atualizado”:** só este arquivo de documentação (status, restore, o que foi reaplicado). Não muda o site.
 
 ---
 
